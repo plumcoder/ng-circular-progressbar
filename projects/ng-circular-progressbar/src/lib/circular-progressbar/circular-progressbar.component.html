@@ -1,0 +1,14 @@
+<svg [ngClass]="[classes.root, className]" [ngStyle]="styles.root" [attr.viewBox]="VIEWBOX">
+  <circle *ngIf="background" [ngClass]="classes.background" [ngStyle]="styles.background" [attr.cx]="VIEWBOX_CENTER_X"
+    [attr.cy]="VIEWBOX_CENTER_Y" [attr.r]="VIEWBOX_HEIGHT_HALF" />
+
+  <g doge-path [className]="classes.trail" [styles]="styles.trail" [counterClockwise]="counterClockwise"
+    [dashRatio]="circleRatio" [pathRadius]="pathRadius" [strokeWidth]="strokeWidth" />
+  <g doge-path [className]="classes.path" [styles]="styles.path" [counterClockwise]="counterClockwise"
+    [dashRatio]="pathRatio * circleRatio" [pathRadius]="pathRadius" [strokeWidth]="strokeWidth" />
+
+  <text *ngIf="text" [ngClass]="classes.text" [ngStyle]="styles.text" [attr.x]="VIEWBOX_CENTER_X"
+    [attr.y]="VIEWBOX_CENTER_Y">
+    {{text}}
+  </text>
+</svg>

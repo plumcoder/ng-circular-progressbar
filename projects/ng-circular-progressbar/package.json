@@ -1,0 +1,24 @@
+{
+  "name": "@plcoder/ng-circular-progressbar",
+  "version": "1.1.0",
+  "description": "A circular progressbar component, built with SVG and extensively customizable",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "svg",
+    "progressbar",
+    "circular-progressbar",
+    "angular-svg-progressbar",
+    "angular-circular-progressbar",
+    "svg-progressbar",
+    "ng-circular-progress-bar",
+    "slim-progress-bar",
+    "extensible-circular-progressbar",
+    "angular progress bar",
+    "angular circular progress bar"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^13.0.0",
+    "@angular/core": "^13.0.0"
+  }
+}

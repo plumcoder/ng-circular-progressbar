@@ -1,0 +1,16 @@
+<div data-test-id="CircularProgressbarWithChildren">
+  <!-- Has an extra div wrapper because otherwise, adding content after this progressbar is spaced weirdly. -->
+  <div style="position: relative; width: 100%; height: 100%">
+    <!-- Progressbar is not positioned absolutely, so that it can establish intrinsic size for props.children's content. -->
+    <ng-circular-progressbar [value]="value" [background]="background" [backgroundPadding]="backgroundPadding"
+      [circleRatio]="circleRatio" [classes]="classes" [counterClockwise]="counterClockwise" [className]="className"
+      [maxValue]="maxValue" [minValue]="minValue" [styles]="styles" [text]="text"></ng-circular-progressbar>
+
+    <!-- Children are positioned absolutely, and height adapts to the progressbar's intrinsic size. It appears below the progressbar, but negative margin moves it back up. -->
+    <div class="child-circle">
+      <ng-content #child>
+      </ng-content>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<ng-container *ngFor="let r of elems; let idx=index">
+  <ng-container *ngTemplateOutlet="separator; context: {$implicit: { 'turns': idx * turns, 'styles': styles } }">
+  </ng-container>
+
+</ng-container>
+<ng-template #separator let-props>
+  <div style="position: 'absolute'; height: '100%'" [style.transform]="'rotate(' + props.turns + 'turn)'">
+    <div [ngStyle]="props?.styles"></div>
+  </div>
+</ng-template>
